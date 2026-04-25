@@ -1,0 +1,326 @@
+/* ===========================
+   GLOBAL — zachowany motyw kolegi
+=========================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* ===========================
+   SIDEBAR — z pliku kolegi
+=========================== */
+.sidebar {
+    width: 80px;
+    background: #020617;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.icon, .sidebar a {
+    font-size: 22px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    transition: background 0.2s;
+}
+
+.icon:hover, .sidebar a:hover,
+.sidebar a.active {
+    background: #1e293b;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    max-width: 1200px;
+}
+
+/* ===========================
+   ALERTY
+=========================== */
+.alert {
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-sukces {
+    background: #052e16;
+    border: 1px solid #16a34a;
+    color: #4ade80;
+}
+
+.alert-blad {
+    background: #450a0a;
+    border: 1px solid #dc2626;
+    color: #fca5a5;
+}
+
+/* ===========================
+   GRID — z pliku kolegi
+=========================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* ===========================
+   KARTY — z pliku kolegi
+=========================== */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   TABELA
+=========================== */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tabela thead {
+    background: #0f172a;
+}
+
+.tabela th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.tabela td {
+    padding: 14px 16px;
+    border-top: 1px solid #334155;
+    vertical-align: middle;
+}
+
+.tabela tr:hover td {
+    background: #243248;
+}
+
+/* ===========================
+   BADGE
+=========================== */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge-blue   { background: #1e3a5f; color: #60a5fa; }
+.badge-green  { background: #052e16; color: #4ade80; }
+.badge-red    { background: #450a0a; color: #fca5a5; }
+.badge-yellow { background: #422006; color: #fbbf24; }
+
+/* ===========================
+   PRZYCISKI AKCJI
+=========================== */
+.btn-akcja {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn-akcja:hover { opacity: 0.8; }
+
+.btn-edytuj { background: #1e3a5f; color: #60a5fa; }
+.btn-usun   { background: #450a0a; color: #fca5a5; }
+.btn-info   { background: #0c2a1a; color: #4ade80; }
+
+/* ===========================
+   FORMULARZE — rozbudowanie stylu kolegi
+=========================== */
+.formularz {
+    background: #1e293b;
+    padding: 28px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+input, select, textarea {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+input::placeholder { color: #475569; }
+
+.date-picker {
+    font-size: 1rem;
+    padding: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover { background: #2563eb; }
+
+/* ===========================
+   KALENDARZ — zachowany z pliku CSS kolegi
+=========================== */
+.calendar-widget {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.calendar-widget h1 {
+    text-align: center;
+    color: #facc15;
+    margin-bottom: 20px;
+}
+
+.grid-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.weekday {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+.day {
+    background: #0f172a;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8fafc;
+    border: 2px solid #1e293b;
+    font-size: 0.8rem;
+    transition: .2s;
+    margin: auto;
+}
+
+.day:hover { border-color: #facc15; cursor: pointer; }
+.empty { visibility: hidden; height: 36px; }
+.day.weekend { opacity: 0.4; }
+
+/* Statusy dni — dokładnie jak u kolegi */
+.day.O { background: #16a34a; color: white; border-color: #16a34a; }
+.day.N { background: #dc2626; color: white; border-color: #dc2626; }
+.day.S { background: #facc15; color: black; border-color: #facc15; }
+.day.Z { background: #3b82f6; color: white; border-color: #3b82f6; }
+.day.U { background: #8b5cf6; color: white; border-color: #8b5cf6; }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .content { padding: 16px; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    .tabela th:nth-child(3),
+    .tabela td:nth-child(3),
+    .tabela th:nth-child(6),
+    .tabela td:nth-child(6) { display: none; }
+}
+
+@media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+}

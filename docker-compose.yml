@@ -1,0 +1,38 @@
+services:
+  # 1. Baza danych MySQL
+  db:
+    image: mysql:8.0
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pracownicy_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # 2. phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    platform: linux/amd64
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PASSWORD: root
+    depends_on:
+      - db
+
+  # 3. PHP + Apache (aplikacja główna)
+  php_app:
+    build: ./docker/php
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src-php:/var/www/html
+    depends_on:
+      - db
+
+volumes:
+  db_data:
