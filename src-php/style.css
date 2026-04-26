@@ -1,6 +1,4 @@
-/* ===========================
-   GLOBAL — zachowany motyw kolegi
-=========================== */
+/* Global */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -11,9 +9,6 @@ body {
     color: #e2e8f0;
 }
 
-/* ===========================
-   SIDEBAR — z pliku kolegi
-=========================== */
 .sidebar {
     width: 80px;
     background: #020617;
@@ -49,9 +44,6 @@ body {
     background: #1e293b;
 }
 
-/* ===========================
-   CONTENT
-=========================== */
 .content {
     flex: 1;
     padding: 30px;
@@ -59,9 +51,6 @@ body {
     max-width: 1200px;
 }
 
-/* ===========================
-   ALERTY
-=========================== */
 .alert {
     padding: 14px 20px;
     border-radius: 12px;
@@ -81,9 +70,6 @@ body {
     color: #fca5a5;
 }
 
-/* ===========================
-   GRID — z pliku kolegi
-=========================== */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -91,9 +77,6 @@ body {
     margin-top: 20px;
 }
 
-/* ===========================
-   KARTY — z pliku kolegi
-=========================== */
 .card {
     background: #1e293b;
     padding: 25px;
@@ -101,9 +84,6 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* ===========================
-   TABELA
-=========================== */
 .tabela {
     width: 100%;
     border-collapse: collapse;
@@ -136,9 +116,6 @@ body {
     background: #243248;
 }
 
-/* ===========================
-   BADGE
-=========================== */
 .badge {
     display: inline-block;
     padding: 4px 10px;
@@ -153,9 +130,6 @@ body {
 .badge-red    { background: #450a0a; color: #fca5a5; }
 .badge-yellow { background: #422006; color: #fbbf24; }
 
-/* ===========================
-   PRZYCISKI AKCJI
-=========================== */
 .btn-akcja {
     display: inline-block;
     padding: 6px 12px;
@@ -174,9 +148,6 @@ body {
 .btn-usun   { background: #450a0a; color: #fca5a5; }
 .btn-info   { background: #0c2a1a; color: #4ade80; }
 
-/* ===========================
-   FORMULARZE — rozbudowanie stylu kolegi
-=========================== */
 .formularz {
     background: #1e293b;
     padding: 28px;
@@ -239,9 +210,6 @@ button {
 
 button:hover { background: #2563eb; }
 
-/* ===========================
-   KALENDARZ — zachowany z pliku CSS kolegi
-=========================== */
 .calendar-widget {
     background: #1e293b;
     padding: 30px;
@@ -287,16 +255,14 @@ button:hover { background: #2563eb; }
 .empty { visibility: hidden; height: 36px; }
 .day.weekend { opacity: 0.4; }
 
-/* Statusy dni — dokładnie jak u kolegi */
+/* Statusy dni */
 .day.O { background: #16a34a; color: white; border-color: #16a34a; }
 .day.N { background: #dc2626; color: white; border-color: #dc2626; }
 .day.S { background: #facc15; color: black; border-color: #facc15; }
 .day.Z { background: #3b82f6; color: white; border-color: #3b82f6; }
 .day.U { background: #8b5cf6; color: white; border-color: #8b5cf6; }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* Responsive */
 @media (max-width: 768px) {
     body { flex-direction: column; }
 

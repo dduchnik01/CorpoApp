@@ -15,7 +15,7 @@ class UrlopController {
         $this->pracownikModel = new PracownikModel();
     }
 
-    // Widok kalendarza obecności (jak w index.html kolegi)
+    // Widok kalendarza obecności
     public function kalendarz(int $pracownikId): void {
         $pracownik = $this->pracownikModel->jeden($pracownikId);
         if (!$pracownik) {
@@ -34,7 +34,7 @@ class UrlopController {
         require __DIR__ . '/../views/urlopy/kalendarz.php';
     }
 
-    // API JSON — jak endpoint /attendance/:year/:month z server.js kolegi
+    // API JSON
     public function apiObecnosc(int $pracownikId, int $rok, int $miesiac): void {
         header('Content-Type: application/json');
         $dane = $this->model->obecnosc($pracownikId, $rok, $miesiac);
@@ -42,7 +42,7 @@ class UrlopController {
         exit;
     }
 
-    // API JSON — jak endpoint /leave/summary z server.js kolegi
+    // API JSON
     public function apiPodsumowanie(int $pracownikId): void {
         header('Content-Type: application/json');
         echo json_encode($this->model->podsumowanieUrlopu($pracownikId));

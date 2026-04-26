@@ -12,7 +12,7 @@ class UrlopModel {
         $this->db = Database::getConnection();
     }
 
-    // Pobierz obecność dla danego miesiąca (jak /attendance/:year/:month w server.js kolegi)
+    // Pobierz obecność dla danego miesiąca
     public function obecnosc(int $pracownikId, int $rok, int $miesiac): array {
         $stmt = $this->db->prepare(
             "SELECT DATE_FORMAT(data, '%Y-%m-%d') AS data, status
@@ -25,7 +25,7 @@ class UrlopModel {
         return $stmt->fetchAll();
     }
 
-    // Podsumowanie urlopu (jak /leave/summary w server.js kolegi)
+    // Podsumowanie urlopu
     public function podsumowanieUrlopu(int $pracownikId): array {
         $stmt = $this->db->prepare(
             "SELECT

@@ -18,8 +18,6 @@ Po poprawnym zbudowaniu kontenerów, aplikacje znajdziesz pod adresami:
 
 - Frontend / Klasyczny CMS (PHP): http://localhost:8000
 
-- Nowoczesne API (Node.js): http://localhost:3000
-
 - Zarządzanie bazą (phpMyAdmin): http://localhost:8080 (login: root, hasło: root)
 
 🛑 Jak zatrzymać serwer?

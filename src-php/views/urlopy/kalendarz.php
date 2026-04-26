@@ -1,6 +1,5 @@
 <?php
 // views/urlopy/kalendarz.php
-// Odpowiednik index.html kolegi — kalendarz obecności
 // $pracownik, $obecnosc, $podsumowanie, $wnioski, $rok, $miesiac dostępne z kontrolera
 
 $pageTitle = 'Kalendarz — ' . $pracownik['imie'] . ' ' . $pracownik['nazwisko'];
@@ -36,7 +35,7 @@ ob_start();
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; flex-wrap:wrap;">
 
-<!-- KALENDARZ — jak .calendar-widget z pliku CSS kolegi -->
+<!-- KALENDARZ -->
 <div>
     <div class="calendar-widget">
         <h1 style="font-size:1.2rem;"><?= $nazwyMiesiecy[$miesiac] ?> <?= $rok ?></h1>
@@ -49,7 +48,7 @@ ob_start();
                style="color:#94a3b8; text-decoration:none; padding:6px 12px; background:#0f172a; border-radius:8px;">Następny →</a>
         </div>
 
-        <!-- Siatka kalendarza — identyczna struktura jak index.html kolegi -->
+        <!-- Siatka kalendarza -->
         <div class="grid-days">
             <div class="weekday">Pn</div>
             <div class="weekday">Wt</div>
@@ -78,7 +77,7 @@ ob_start();
             <?php endfor; ?>
         </div>
 
-        <!-- Legenda statusów — jak w style.css kolegi (O,N,S,Z) + U=Urlop -->
+        <!-- Legenda statusów -->
         <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px; font-size:0.8rem;">
             <span class="day O" style="width:auto; border-radius:6px; padding:4px 8px; height:auto;">O — Obecny</span>
             <span class="day N" style="width:auto; border-radius:6px; padding:4px 8px; height:auto;">N — Nieobecny</span>
@@ -115,7 +114,7 @@ ob_start();
     </div>
 </div>
 
-<!-- PANEL URLOPOWY — jak /leave/summary z server.js kolegi -->
+<!-- PANEL URLOPOWY -->
 <div>
     <!-- Podsumowanie urlopu -->
     <div class="card" style="margin-bottom:20px;">

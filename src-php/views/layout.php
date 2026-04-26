@@ -1,7 +1,6 @@
 <?php
 // =============================================
 // views/layout.php — wspólny szablon HTML
-// Zachowuje ciemny motyw z pliku kolegi (style.css)
 // =============================================
 
 // Wymuś kodowanie UTF-8 w przeglądarce
@@ -27,7 +26,7 @@ function isActive(string $path, string $current): string {
 </head>
 <body>
 
-<!-- SIDEBAR — jak w index.html kolegi -->
+<!-- SIDEBAR -->
 <aside class="sidebar">
     <a href="/" class="icon <?= isActive('/', $currentUri) && $currentUri === '/' ? 'active' : '' ?>" title="Dashboard">🏠</a>
     <a href="/pracownicy" class="icon <?= isActive('/pracownicy', $currentUri) ?>" title="Pracownicy">👥</a>

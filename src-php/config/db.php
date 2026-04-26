@@ -1,7 +1,6 @@
 <?php
 // =============================================
 // config/db.php — połączenie z bazą (PDO)
-// Odpowiednik db.js kolegi, ale w PHP + MySQL
 // =============================================
 
 define('DB_HOST', 'db');        // nazwa serwisu z docker-compose
