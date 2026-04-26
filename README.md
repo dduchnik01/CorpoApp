@@ -1,7 +1,5 @@
 # CorpoApp
 
-Pełny system demonstracyjny dla aplikacji korporacyjnych (PHP & Node.js).
-
 ## 🚀 Jak uruchomić projekt?
 
 1. Sklonuj repozytorium i wejdź do folderu:
